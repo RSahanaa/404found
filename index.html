@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404found — Smart Lost & Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="enhancements.css">
+</head>
+
+<body>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<nav class="navbar">
+    <a href="#" class="logo">404<span>found</span>.</a>
+
+    <div class="nav-links">
+        <a href="#browse">Browse</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#report" class="nav-button">Report item</a>
+    </div>
+</nav>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">SMART LOST & FOUND</p>
+
+            <h1>
+                Lost something?<br>
+                <span>Let's find it.</span>
+            </h1>
+
+            <p class="hero-description">
+                404found helps people report, discover and reconnect
+                with lost items through smart matching.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#report" class="button primary">
+                    Report an item <span>↗</span>
+                </a>
+
+                <a href="#browse" class="button secondary">
+                    Browse reports
+                </a>
+            </div>
+
+            <p class="tiny-note">
+                <span>●</span> Built for campuses & communities
+            </p>
+
+        </div>
+
+
+        <div class="hero-demo">
+
+            <div class="match-window">
+
+                <div class="window-header">
+                    <span>404FOUND / MATCH ENGINE</span>
+                    <span class="live">● LIVE</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="item-preview">
+
+                    <div class="fake-image">CALC</div>
+
+                    <div>
+                        <small>LOST ITEM</small>
+                        <h3>Black Casio Calculator</h3>
+                        <p>PES RR Campus · Oct 01</p>
+                    </div>
+
+                </div>
+
+                <div class="match-label">
+                    ↓ POTENTIAL MATCH
+                </div>
+
+                <div class="item-preview found-item">
+
+                    <div class="fake-image">CALC</div>
+
+                    <div>
+                        <small>FOUND ITEM</small>
+                        <h3>Black Scientific Calculator</h3>
+                        <p>Library · Oct 02</p>
+                    </div>
+
+                </div>
+
+                <div class="match-score">
+                    <strong>87%</strong>
+                    <span>match confidence</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div>
+            <strong id="total-count">0</strong>
+            <span>Reports</span>
+        </div>
+
+        <div>
+            <strong id="lost-count">0</strong>
+            <span>Lost</span>
+        </div>
+
+        <div>
+            <strong id="found-count">0</strong>
+            <span>Found</span>
+        </div>
+
+        <div>
+            <strong id="resolved-count">0</strong>
+            <span>Resolved</span>
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section">
+
+        <p class="section-label">01 / HOW IT WORKS</p>
+
+        <h2>
+            From "where is it?"<br>
+            to <span>"found it."</span>
+        </h2>
+
+        <div class="steps">
+
+            <article class="step-card">
+                <span class="step-number">01</span>
+                <h3>Report</h3>
+                <p>
+                    Tell us what you lost or found. Add the
+                    important details, location and date.
+                </p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">02</span>
+                <h3>Match</h3>
+                <p>
+                    404found compares descriptions, categories,
+                    locations and dates to find possible matches.
+                </p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">03</span>
+                <h3>Reconnect</h3>
+                <p>
+                    Claim with an ownership detail. The finder reviews it,
+                    confirms the handover and closes the report.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORT FORM -->
+    <section id="report" class="section report-section">
+
+        <div class="report-intro">
+
+            <p class="section-label">02 / REPORT</p>
+
+            <h2>
+                Put it<br>
+                <span>out there.</span>
+            </h2>
+
+            <p>
+                The more details you add, the easier it is
+                for 404found to find a possible match.
+            </p>
+
+        </div>
+
+
+        <form id="report-form" class="report-form">
+
+            <div class="report-type">
+
+                <label>
+                    <input type="radio" name="report-type" value="lost" checked>
+                    <span>I LOST something</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="report-type" value="found">
+                    <span>I FOUND something</span>
+                </label>
+
+            </div>
+
+
+            <div class="two-columns">
+
+                <label>
+                    Item name
+                    <input
+                        type="text"
+                        id="item-name"
+                        placeholder="e.g. Black Casio calculator"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Category
+
+                    <select id="category">
+
+                        <option>Electronics</option>
+                        <option>Documents / ID</option>
+                        <option>Wallet / Money</option>
+                        <option>Keys</option>
+                        <option>Books</option>
+                        <option>Accessories</option>
+                        <option>Clothing</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <label>
+                Description
+
+                <textarea
+                    id="description"
+                    placeholder="Colour, brand, model, scratches, stickers, unique details..."
+                    required
+                ></textarea>
+
+            </label>
+
+
+            <div class="two-columns">
+
+                <label>
+                    Location
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. PES RR Campus Library"
+                        required
+                    >
+
+                </label>
+
+                <label>
+                    Date
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                </label>
+
+            </div>
+
+
+            <label>
+                Contact
+
+                <input
+                    type="text"
+                    id="contact"
+                    placeholder="Email or phone number"
+                    required
+                >
+
+            </label>
+
+
+            <label class="image-upload">
+
+                <input type="file" id="photo" accept="image/*">
+
+                <span id="file-name">
+                    + Add an image
+                </span>
+
+            </label>
+
+
+            <button type="submit" class="button primary submit-button">
+                Submit report <span>→</span>
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- BROWSE -->
+    <section id="browse" class="section browse-section">
+
+        <div class="browse-header">
+
+            <div>
+                <p class="section-label">03 / LIVE BOARD</p>
+                <h2>Recent reports</h2>
+            </div>
+
+            <div class="filters">
+
+                <button class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter" data-filter="lost">
+                    Lost
+                </button>
+
+                <button class="filter" data-filter="resolved">Resolved</button>
+                <button class="filter" data-filter="found">
+                    Found
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p class="local-note">Local college-project demo · Reports and claims stay in this browser. Use sample reports to try both sides of a handover.</p>
+        <div id="report-cards" class="report-cards"></div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+
+        <div class="contact-intro">
+
+            <p class="section-label">04 / CONTACT</p>
+
+            <h2>
+                Let's build<br>
+                something <span>cool.</span>
+            </h2>
+
+            <p>
+                Have a question about 404found, want to collaborate,
+                or just want to say hi? Find me here.
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-top">
+                <div class="contact-avatar"><img src="sahanaa.jpg" alt="Sahanaa Raghavan"></div>
+
+                <div>
+                    <p class="contact-role">BUILT BY</p>
+                    <h3>Sahanaa Raghavan</h3>
+                    <p class="contact-title">
+                        B.Tech ECE · PES University
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-links">
+
+                <a href="mailto:rsahanaa@gmail.com">
+                    <span>EMAIL</span>
+                    <strong>rsahanaa@gmail.com</strong>
+                    <b>↗</b>
+                </a>
+
+                <a href="tel:+91XXXXXXXXXX">
+                    <span>PHONE</span>
+                    <strong>+91 8807982612</strong>
+                    <b>↗</b>
+                </a>
+
+                <a href="https://www.linkedin.com/in/sahanaa-raghavan-920012357" target="_blank">
+                    <span>LINKEDIN</span>
+                    <strong>linkedin.com/in/sahanaa-raghavan-920012357</strong>
+                    <b>↗</b>
+                </a>
+
+                <a href="https://github.com/RSahanaa" target="_blank">
+                    <span>GITHUB</span>
+                    <strong>github.com/RSahanaa</strong>
+                    <b>↗</b>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <span>404found.</span>
+
+    <span>
+        Smart Lost & Found · Built with HTML, CSS & JavaScript
+    </span>
+
+</footer>
+
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="script.js"></script>
+<script src="enhancements.js"></script>
+
+</body>
+</html>
